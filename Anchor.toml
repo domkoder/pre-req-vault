@@ -7,14 +7,18 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-pre_req_vault = "DBoobRVqT7PaAhq8obqo95723CHyWvcCLRUKvQ5wYWE4"
+pre_req_vault = "J72D93pT1FMFN3tAXjnBcYWT5c4UeZR72vcPeD5nJvZY"
+
+[programs.devnet]
+pre_req_vault = "J72D93pT1FMFN3tAXjnBcYWT5c4UeZR72vcPeD5nJvZY"
 
 [provider]
 cluster = "devnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
-test = "pnpm exec ts-mocha -p ./tsconfig.json -t 1000000 \"tests/**/*.ts\""
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 \"tests/**/*.ts\""
 testsvm = "cargo test"
+
 
 [hooks]
